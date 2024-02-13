@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search-item" placeholder="search" onkeyup="search(),sea()">
+    <p id="p1">laptop venum ma venam ma</p>
+    <input type="radio" id="h2" value="ki" name="li">
+    <font id="h3"></font>
+    <img src="mainad.gif" alt="img">
+
+    <script>
+        document.getElementById("p1").style.display="none";
+        const search=() =>{
+            const searchbox=document.getElementById("search-item").value.toUpperCase();
+            // const data=["laptop","mobile","book","watch"]
+            const data=["l","la","lap","lapt","lapto","laptop"]
+            
+            for(var i=0;i<data.length;i++){
+                if(searchbox.toUpperCase()==data[i].toUpperCase()){
+                    document.getElementById("h2").style.display="";
+                    document.getElementById("h3").innerHTML="lavanya";
+                    break;  
+                }
+                else{
+                    document.getElementById("h2").style.display="none";
+                    document.getElementById("h3").innerHTML="";
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

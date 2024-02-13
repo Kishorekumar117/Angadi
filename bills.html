@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent_Bill</title>
+    <script src="./my_new_project.js"></script>
+    <style>
+*{
+font-family: 'Poppins',sans-serif;
+}
+body{
+background-color: #2ec194;
+}
+#left_box{
+
+margin-left: 0px;
+padding: 10px;
+}
+#left_box,#main,#right1,#right2{
+background-color: #2ec194;
+border-radius: 15px;
+box-shadow: -15px -15px 15px rgba(255,255,255,0.1),15px 15px 15px rgba(0,0,0,0.1);
+}
+table tr td{
+padding-bottom: 10px;
+}
+
+/* ============================================= input text==== */
+.texts{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 30px;
+}
+.inputs{
+position: relative;
+width: 250px;
+}
+.inputs{
+padding: 10px;
+border: 2px solid black;
+background-color: #2ec194;
+border-radius: 5px;
+outline: none;
+color: #fff;
+font-size: 1em;
+}
+span{
+position: absolute;
+margin-left: 30px;
+left: 0;
+pointer-events: none;
+padding: 10px;
+text-transform: uppercase;
+font-size: 0.80em;
+color: white;
+}
+.inputs:valid ~span,.inputs:focus~span{
+color: black;
+border-radius: 20px;
+transform: translateX(2px) translateY(-20px);
+font-size: 0.50em;
+padding: 0 10px;
+background-color: #2ec194;
+/* border-left: 1px solid blue;
+border-right: 1px solid blue; */
+}
+
+/* ==================================================================== */
+
+/* ======================= drop down=============================================== */
+.s{
+width: 200px;
+position: relative;
+}
+.s select{
+height: 42px;
+padding: 10px 15px;
+line-height: 22px;
+font-size: 18px;
+width: 100%;
+border: 2px solid #ccc;
+border-radius: 8px;
+box-shadow: -15px -15px 15px rgba(255,255,255,0.1),15px 15px 15px rgba(0,0,0,0.1);
+-webkit-appearance: none;
+appearance: none;
+}
+.s:after{
+content: "";
+position: absolute;
+right: 10px;
+top:20px;
+margin-top: -4px;
+border-top: 8px solid #b3a9a9;
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+pointer-events: none;
+
+}
+.s select:hover{
+border: 2px solid #2ec194;
+}
+
+select:focus{
+border: 2px solid #2ec194;
+}
+
+/*========================= button================================*/
+#butn{
+margin-left: 20px;
+}
+.butn{
+border: none;
+height: 45;
+padding: 4px 20px;
+font-size: 20px;
+position: relative;
+background: transparent;
+color: white;
+text-transform: uppercase;
+border: 2px solid #ccc;
+cursor: pointer;
+transition: all 0.7s;
+/* overflow: hidden; */
+border-radius: 100px;
+
+}
+.butn:hover{
+color: black;
+box-shadow: -15px -15px 15px rgba(255,255,255,0.1),15px 15px 15px rgba(0,0,0,0.1);
+height: 35px;
+border-radius: 20px;
+border: 3px solid #2ec194;
+}
+
+/* ======================================================= */
+#p{
+border-top:2px solid black;
+border-bottom:2px solid black;
+border-left:2px solid black;
+}
+#right2,#right1,#left_box,#main{
+border:1px solid rgb(209, 208, 208,0.4);
+}
+
+	
+</style>
+</head>
+<body><br>
+    <table id="main" border="0" width="10%">
+        <tr><td><div><h1>RENT AMOUNT</h1></div></td></tr>
+        <tr>
+            <div align="left"><td width="35%">
+                <table id="left_box" border="0" align="left">
+                    <tr>
+                        <td><div class="texts" align="center"><input type="text" class="inputs" id="input1" required="required" maxlength="4" onkeyup="fn(this,'input2')">
+                            <span>Enter Latest Month 'EB' Reading</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div  class="texts" align="center"><input type="text" class="inputs" required="required" id="input2" maxlength="4">
+                            <span>Enter Last Month 'EB' Reading</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <div align="center"><div class="s"><select class="myselect" id="mySelect" >
+                            <option value="1">Rent Amount</option>
+                            <option value="3300">3,300</option>
+                            <option value="4000">4,000</option>
+                            <option value="6000">6,000</option>
+                          </select></div>
+                        <br>
+                          <div class="s"><select class="myselect" id="mySelect1">
+                            <option value="2">water Amount</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="500">500</option>
+                          </select></div></div><br>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><div align="center">
+                        <button class="butn" onclick="fun()">Check</button>
+                        <button class="butn" id="butn" onclick="fun2()">clear</button><br>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+            </td></div>
+            </tr>
+            <tr>
+            <td width="65%">
+                <div align=center><table id="right1" border="1" width="100%" style="margin-top: 20px;"><tr>
+                    <td width="20%"><div align=center><p id="d"></p></div></td><td width="20%"><div align=center><p id="eb2"></p></div>
+                    </td><td width="20%"><div align=center><p id="unit"></p></div></td><td width="20%"><div align=center><p id="c_a"></p></div></td>
+                </tr></table></div>
+                <div align="center">
+                <table border="0" id="right2" width="40%" style="margin-top: 30px;">
+                    <tr>
+                    <td width="30%"><div align="right"><label>Rent Amount (வ) : </label></div></td>
+                    <td width="20%"><div align=center><p id="rent_amount"></p></div></td>
+                    </tr>
+
+                    <tr>
+                        <td width="20%"><div align="right"><label>Current Amount (க) : </label></div></td>
+                        <td width="20%"><div align=center> <p id="current_amount"></p></div></td>
+                        <td width="10%" rowspan="1"><div align=right><p id="p"></p></div></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"><div align="right"><label>Water Amount (த) : </label></div></td>
+                        <td width="20%"><div align=center> <p id="water_amount"></p></div></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"><div align="right"><label id="b">Basic Work (மு) : </label></div></td>
+                        <td width="20%"><div align=center> <p id="basic_work"></p></div></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="1"><div align="center"><hr width="90%"></div></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td width="20%"><div align=center><p id="total"></p></div></td>
+                    </tr>
+                </table></div>
+
+                
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+
+function fn(froo,too){
+    var len=froo.value.length;
+    var mx=froo.getAttribute("maxlength");
+    if(len==mx){
+        document.getElementById(too).focus();
+    }
+}
+
+
+
+function fun(){
+    
+    var today= new Date();
+    var date = today.getDate()+' - '+(today.getMonth()+1)+' - '+today.getFullYear();
+    function appendZero(value){
+        return (value<10) ? '0'+value: value;
+    }
+
+    var units= parseInt(document.getElementById("input1").value) -  parseInt(document.getElementById("input2").value);
+ //    document.getElementById("unit").innerHTML=units;
+    var uni=units;
+    var eb=parseInt(document.getElementById("input1").value);
+ var u_amount=units*8;
+    var c_amt=u_amount;
+
+
+
+    var r = parseInt(document.getElementById("mySelect").value);
+    var z = parseInt(document.getElementById("mySelect1").value);
+
+    
+    if(z==2){
+        alert("enter the valid water amount")
+    }
+    if(r==1){
+        alert("enter the valid rent amount")
+    }
+    
+
+
+    j=(r).toString();
+
+
+
+    document.getElementById("water_amount").innerHTML = "&nbsp;";
+    document.getElementById("basic_work").innerHTML = "&nbsp;";
+    document.getElementById("rent_amount").innerHTML ="&nbsp;";
+    document.getElementById("total").innerHTML ="&nbsp;-";
+    document.getElementById("current_amount").innerHTML ="";
+    // document.getElementById("d").innerHTML="&nbsp;";
+    document.getElementById("eb2").innerHTML="&nbsp;";
+    document.getElementById("unit").innerHTML="&nbsp;";
+    document.getElementById("c_a").innerHTML="&nbsp;";
+    document.getElementById("p").innerHTML="&nbsp;";
+
+
+
+    if(document.getElementById("input1").value=="" || document.getElementById("input2").value==""){
+        alert("pls enter the readings da");
+    }
+    else{
+        if(r==6000){
+            total = 6000 + u_amount + z;
+            document.getElementById("water_amount").innerHTML = z;
+            document.getElementById("basic_work").innerHTML = "-";
+        }else if(r==3300){
+            total = 3300 + u_amount + z + 100;
+            document.getElementById("water_amount").innerHTML = z;
+            document.getElementById("basic_work").innerHTML = "100";
+        }else if(r==4000){
+            total = 4000 + u_amount + z ;
+            document.getElementById("water_amount").innerHTML = z;
+            document.getElementById("basic_work").innerHTML = "-";
+        }
+        document.getElementById("rent_amount").innerHTML = j[0]+","+j[1]+j[2]+j[3];
+        i=(total).toString();
+        document.getElementById("total").innerHTML = i[0]+","+i[1]+i[2]+i[3];
+        document.getElementById("current_amount").innerHTML = u_amount;
+        document.getElementById("d").innerHTML=date;
+        document.getElementById("eb2").innerHTML="EB Readings :"+eb;
+        document.getElementById("unit").innerHTML="Unit :"+uni;
+        document.getElementById("c_a").innerHTML="Current Amount :"+c_amt;
+        document.getElementById("p").innerHTML=units;
+
+    }
+
+ }
+ function fun2(){
+    document.getElementById("input1").value="";
+    document.getElementById("input2").value="";
+
+    document.getElementById("water_amount").innerHTML = "&nbsp;";
+    document.getElementById("basic_work").innerHTML = "&nbsp;";
+    document.getElementById("rent_amount").innerHTML ="&nbsp;";
+    document.getElementById("total").innerHTML ="&nbsp;-";
+    document.getElementById("current_amount").innerHTML ="";
+
+    document.getElementById("mySelect").value="1"
+    document.getElementById("mySelect1").value="2"
+    // document.getElementById("d").innerHTML="&nbsp;";
+    document.getElementById("eb2").innerHTML="&nbsp;";
+    document.getElementById("unit").innerHTML="&nbsp;";
+    document.getElementById("c_a").innerHTML="&nbsp;";
+    document.getElementById("p").innerHTML="&nbsp;";
+ }
+
+</script>
+</html>

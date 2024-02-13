@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Buy Now</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./but_lap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="./demo.js"></script>
+  <style>
+    body{
+        margin: 0px;
+        background-image: linear-gradient(white,rgb(155, 154, 154,0.9));
+        background-repeat: no-repeat;
+        /* overflow-x: hidden; */
+    }
+    #head{
+        position: fixed;
+        z-index: 1;
+        background-color: rgb(124, 153, 151);
+        box-shadow: 0px 0px 10px 2px gray;
+        width: 100%;
+        height: 63px;
+    }
+    #headh{
+        margin-left: 5px;
+        display: inline-block;
+    }
+    .bs:hover,.m:hover,.cs:hover,.e:hover,.td:hover{
+        border-bottom: 4.5px rgb(15, 15, 15,0.7) solid;
+        padding-bottom: 2px;
+    }
+    #headl{
+        margin-left: 30px;
+        display: inline-block;
+        /* background-color: pink; */
+        color: rgb(252, 245, 245,0.8);
+        font-size: 17px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    sup{
+        color:red;
+        margin-left:3px ;
+    }
+    #inp{
+        margin-left: 80px;
+        color: black;
+        font-size: 15px;
+        padding: 12px 9px 3px 32px;
+        margin-bottom: 1px;
+        border-bottom: 1px solid;
+        border-top: 0px;
+        border-left: 0px solid;
+        border-right: 0px;
+        background-color:  rgb(255, 174, 0,0);
+        border-radius: 10px 0px 0px 0px;
+        
+    }
+    #inp:hover{
+        margin-left: 79px;
+        border-left: 1px solid;
+    }
+    ::placeholder{
+        font-size: 18px;
+    }
+    .pro,.bar{
+        margin-left: 25px;
+        display: inline-block;
+        font-size: 26px;
+        color: black;
+
+    }
+    #heads{
+        display: inline-block;
+        position: absolute;
+        margin-left: 73%;
+        margin-top: 30px;
+        font-size: 16px;
+        color:rgb(10, 10, 10,0.7);
+    }
+
+
+    /* Tooltip container */
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    }
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 2px rgb(112, 160, 157);
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    width: 190px;
+    top: 100%;
+    left: 50%;
+    margin-left: -150px;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+    }
+
+    .empty{
+        display: inline-block;
+        position: absolute;
+    }
+
+    /* ============= */
+    
+    .boad{
+      margin-top: 3px;
+      width: 100%;
+      height: 50px;
+      background-color: whitesmoke;
+      box-shadow: 0px 0px 7px 0px grey;
+    }
+    .brand{
+      margin-top: 15px;
+      font-size: 17px;
+    }
+    .brand2{
+      margin-top: 8px;
+      cursor: pointer;
+    }
+    .dbrand{
+      margin-left: 880px;
+      background-color: rgb(235, 235, 235,0.9);
+    }
+    .a{
+      color:rgb(66, 66, 66,0.7) ;
+    }
+    /* =========== */
+
+
+  .affix {
+    z-index: 1;
+    margin-top: 58px;
+    top: 0;
+    width: 100%;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .affix-top {
+    /* z-index: 1; */
+    position: static;
+    top: -75px;
+  }
+  .affix + .container-fluid {
+    z-index: 1;
+    padding-top: 70px;
+  }
+
+/* =========== end block code css========================= */
+.ad{
+
+    margin-top:20px;
+    margin-left: 9px;
+    background-color: whitesmoke;
+    height: 370px;
+    width: 99%;
+    /* border-radius: 15px; */
+    box-shadow: 0px 0px 8px 3px rgb(0, 0, 0,0.2);
+}
+.sho{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+#about{
+    margin-top: 5px;
+    background-color: white;
+}
+a{  
+  color:black;
+}
+#fff,#ttt{
+  color:blue;
+  font-size: 30px;
+}
+#iii{
+  color:pink;
+  font-size: 30px;
+}
+#yyy{
+  color:red;
+  font-size: 30px;
+}
+
+/* ================================================ */
+/* ========= */
+select{
+    width: 40px;
+    height: 35px;
+    border-radius: 20px;
+}
+
+#buynowbtn1,#buynowbtn2{
+    width: 140px;
+    height: 40px;
+    border: 0px solid transparent;
+    border-radius: 20px;
+}
+#buynowbtn1{
+    background-color: rgb(255, 255, 0,0.7);
+}
+#buynowbtn2{
+    background-color: orange;
+}
+#buynowbtn1:hover,#buynowbtn2:hover,select:hover{
+    box-shadow: 0px 0px 10px 1px rgb(0, 0, 0,0.3);
+}
+#buynowbtn1:hover{
+    background-color: yellow;   
+}
+#buynowbtn2:hover{
+    background-color: rgb(255, 165, 0,0.8);   
+}    
+    
+</style>
+  
+
+
+
+</head>
+<body>
+  
+  <div id="head">
+        
+    <!-- <div id="heads"><i class="fa-solid fa-magnifying-glass" id="search"></i></div> -->
+    <div id="headh" class="angadi"><font size=6 color=#000080>ANGA
+        <font size=8 color=#ffA500>D</font>
+        <font size=6 color=#000080>I</font></font>
+    </div>
+    <div id="headl" class="bs">Best Sellers<sup color="red" size="4.5">New</sup></div>
+    
+    <div id="headl" class="m">Mobile</div>
+    <div id="headl" class="cs">Customer Service</div>
+    <div id="headl" class="e">Electronics</div>
+    <div id="headl" class="td">Today's Deals<sup color="red" size="4.5">New</sup></div>
+
+    <div id="headl">
+      <input type="text" id="inp"  placeholder="Search for products" onkeyup="search(),search_brand()">
+    </div>
+
+    <div class="tooltip"><div id="hea" class="pro"><i class="fa-solid fa-circle-user"></i></div>
+    <span class="tooltiptext">name: kishore<br>mobile numeber:9841925511
+    </span>
+    </div>
+    <div id="hea" class="bar"><i class="fa-solid fa-bars"></i></div>
+</div><br>
+<!-- ================================================
+ -->
+ <div><br><br></div>
+<!-- ================================= -->
+<!-- <div class="name">
+<h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>MSI Crosshair 15</b>, Intel 12th Gen. i7-12700H,
+    40CM QHD 165Hz Gaming Laptop.</h2>
+</div> -->
+
+<section id="pro_d" class="part_1">
+    <!-- <div class="abt-p-v">
+        <img src="./l7.gif" width="170px" height="400px">
+    </div> -->
+
+
+    <div class="first_img">
+        <img src="./l1.png" width="100%" id="big_img">
+
+    <div class="small_img_cont">
+        <div class="small_imgs">
+            <img src="./l1.png" width="100%" class="small_img">
+        </div>
+        <div class="small_imgs">
+            <img src="./l2.png" width="100%" class="small_img">
+        </div>
+        <div class="small_imgs">
+            <img src="./l3.png" width="100%" class="small_img">
+        </div>
+        <div class="small_imgs">
+            <img src="./l4.png" width="100%" class="small_img">
+        </div>
+        <div class="small_imgs">
+            <img src="./l5.png" width="100%" class="small_img">
+        </div>
+    </div>
+    </div>
+    
+    <div class="pro-det">
+        
+           <font size="4.5">
+            <font size="4"><b>MSI Crosshair 15</b>, Intel 12th Gen. i7-12700H,
+                40CM QHD 165Hz Gaming Laptop (16GB/1TB NVMe SSD/ Windows 11 Home/NVIDIA RTX 3070 8GB GDDR6/Black/2.47Kg),
+                <b>12UGZ-1012IN.</b></font>
+            <br><font size="7"><font color="red">-25%</font>&nbsp;<sup>₹</sup>1,34,990</font><br>
+            <font size=4><b>M.R.P.:</b><del>₹ 1,79,990</del></font><br>
+
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-regular fa-star" id="star"></i><br>
+            <b>Free Delivery</b><br>
+            <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹2,862 Off</font> On Exchange<br>
+          <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+        Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>6000</font></font><br><br>
+        <label>QUANTITY : &nbsp;</label><select><option>&nbsp;&nbsp;1</option><option>&nbsp;&nbsp;2</option><option>&nbsp;&nbsp;3</option></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="buynowbtn1">Add To Cart</button>&nbsp;&nbsp;&nbsp;<button onclick="window.location.href='booking_order.html'" id="buynowbtn2">Buy Now</button>
+      </div>
+
+      <div class="abt-p-v">
+        <img src="./l7.gif" width="170px" height="400px">
+    </div>
+
+</section>
+<br>
+
+<div class="container">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#home">Features</a></li>
+      <li><a href="#menu1">Specification</a></li>
+      <li><a href="#menu2">Additional Information</a></li>
+    </ul>
+  
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <h3>Features</h3>
+        <p>&nbsp;&nbsp;Processor: 12th Generation Intel Core i7-12700H Up To 4.70 GHz;Operating System: Pre-loaded Windows 11 Home with lifetime validity |Preinstalled Software: Nvidia GeForce Experience Nahimic 3 MSI Center Gaming Mode MSI App player | In the box: Laptop, Adapter</p>
+        <p>&nbsp;&nbsp;Display: 40CM QHD (2560*1440), 165Hz DCI-P3 100% IPS Level Panel;Memory & Storage: 8GBx2 DDR4 3200MHz RAM, expandable to 64 GB | Storage:1TB NVMe PCIe Gen4x4 SSD</p>
+        <p>&nbsp;&nbsp;Dedicated Graphics: NVIDIA GeForce RTX 3060 GDDR6 6GB;"Thin and light High Performance design | Laptop weight: 2.3 kg "
+            Keyboard: Spectrum Backlight Keyboard;Camera: HD type (30fps@720p) | Microphone: Built-in microphone; "1x Type-C USB3.2 Gen1 2x Type-A USB3.2 Gen1 1x Type-A USB2.0 1x RJ45 1x (4K @ 60Hz) HDMI"
+            Resolution: 1280 X 7202560 X 1440; Human Interface Input: Microphonekeyboard</p>
+      </div>
+
+      <div id="menu1" class="tab-pane fade">
+        <h3>Product Information</h3>
+        <p>Graphics Coprocessor GeForce RTX 3060<br>
+            CPU Speed	4.7 GHz<br>
+            Hard Disk Description	SSD<br>
+            Resolution	2560 x 1440, 1280 x<br> 720
+            Item Weight	2300 Grams<br>
+            Total USB ports	4<br>
+            Connector Type	USB, Ethernet, HDMI<br>
+            Processor Count	1<br>
+            Graphics Processor Manufacturer	NVIDIA<br>
+            Specific Uses For Product	Multimedia, Student, Gaming<br>
+            CPU Manufacturer	Intel<br>
+            Battery Cell Composition	Lithium Polymer<br>
+            Graphics RAM Size	6 GB<br>
+            Memory Slots Available	2</p>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <br>
+        <p><b>ASIN:</b> B09Y8SMYRS<br>
+        <b>Customer Reviews:</b> 4.2 out of 5 stars 104Reviews<br><br>
+        <b>Best Sellers Rank:</b> #75,206 in Electronics (See Top 100 in Electronics)<br><br>
+            #643 in Traditional Laptops<br>
+        </b>Date First Available:</b> 19 April 2022<br>
+            <b>Packer:</b> Micro-Star International Co., Ltd. No. 88 East Qianjin Road, Kunshan City, Jiangsu, China<br>
+            <b>Item Dimensions LxWxH:</b> 35.9 x 25.9 x 2.7 Centimeters<br>
+            <b>Net Quantity:</b> 1 Piece<br>
+            <b>Generic Name:</b> Crosshair 15 B12UEZ</p>
+      </div>
+    </div>
+  </div>
+
+
+<div style="padding-left: 20px;">
+<h1>You might also like</h1>
+<hr  size="95">
+<font color="grey">Sponsored</font>
+</div>
+
+<br>
+<div align="">
+    <table width="60%" border="0" cellspacing="100" cellpadding="100">
+        <tr>
+            <td>
+                <div class="gallery">
+                    <div class="desc1">
+                        <img id="imge" src="lap1.png"  width="200px" height="200px">
+                    <div class="fdesc">
+                        <font><b>Hp Chromebook</b>11a - 15 pro<br>MediaTek<br>
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star-half-stroke" id="star"></i>
+                            <i class="fa-regular fa-star" id="star"></i>
+                            <i class="fa-regular fa-star" id="star"></i><br>
+                            
+                            <font size="6" color="red">-18%</font><font size="6"><sup>₹</sup>22,299</font><br>
+                            <b>M.R.P.:</b>₹<del>39,999</del><br>
+                            <font color="blue">Good.1,090 Ratings</font>
+                            <br>Buy Now and Pay Late with <b>EMI</b><font color=blue> Active Now</font></font>
+                        
+                    </div>
+                </div>
+                </div>
+            </td>
+            <td>
+                <div class="gallery">
+                    <span class="desc1">
+                        <img src="./laptop3.png"  width="200px" height="200px">
+                    <div class="fdesc">
+                        <font><b>Lenova IdeaPad 3 core i5 11th Gen-</b>(8 GB/521 GB/<br>SSD/Windows 11 home)<br>
+                            
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star-half-stroke" id="star"></i>
+                            <i class="fa-regular fa-star" id="star"></i><br>
+                            
+                            <font size="6" color="red">-33%</font><font size="6"><sup>₹</sup>39,999</font><br>
+                            <b>M.R.P.:</b>₹<del>75,999</del>
+                        <br><b>Free Delivery</b><br>No cost EMI from 
+                        <font color=blue>₹6,665/month</font></font>
+                    </div>
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="gallery">
+                    <span class="desc1">
+                        <img src="./lap3.png"  width="200px" height="200px">
+                    <div class="fdesc">
+                        <font><b>Hp laptop gen 12</b>(128 GB)-silver<br>
+                            
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-regular fa-star" id="star"></i>
+                            
+                            
+                            <br><font size="6"><font color="red">-8%</font><sup>₹</sup>59,900</font><br>
+                            <b>M.R.P.:</b>₹<del>64,900</del><br>
+                            <b>Free Delivery</b><br>
+                            <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹2,862 Off</font> On Exchange</font>
+                    </div>
+                    </span>
+                  </div>
+            </td>
+            <td>
+                <div class="gallery">
+                    <span class="desc1">
+                        <img src="./lap4.png"  width="200px" height="200px">
+                    <div class="fdesc">
+                        <font><b>Asus laptop 5G</b> (Sonic Black, 8GB RAM, 128GB Storage)<br>
+                            
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-solid fa-star" id="star"></i>
+                            <i class="fa-regular fa-star" id="star"></i><br>
+                            
+                            <font size="6" color="red">-0%</font><font size="6"><sup>₹</sup>39,999</font><br>
+                            <b>M.R.P.:</b>₹<del>39,999</del><br>
+                            <b>EMI</b> from
+                            <font color=blue>₹1,911.</font><br><font color=blue>No Cost EMI available</font><br>
+                            EMI options</font>
+                    </div>
+                    </span>
+                  </div>
+            </td>
+        </tr>
+        </table>
+        </div>
+
+<!-- ========================================= -->
+<div align="center" class="lapad">
+    <img src="lapad3.jpg" alt=""><img src="lapad4.jpg" alt=""><img src="lapad2.jpg" alt="">
+</div>
+
+<div class="biglapad">
+    <img src="lapad5.jpg" alt="">
+</div>
+
+
+<!-- ====================================================== -->
+<div align="center" class="ad">
+  <a href="#"><img class=sho src="./men.jpg" width="95%" height="350px"></a>
+</div>
+
+<div id="about">
+  <table border="0" width="100%">
+      <tr>
+          <td valign="top"><br><br>
+              <font face="Candara" size="6"><b>Shop Now On Angadi</b></font><br><br>
+              <font face="Candara">Trusted by more than 1 Crore Indians<br>
+              Cash on Delivery | Free Delivery</font><br>
+              <img src="./googleandapple.png" width="350px" height="90px">
+
+          </td>
+          <td valign="top"><br><br><br>
+              <a href="#"><font  face="Candara">Careers</a></font><br><br>
+              <a href="#"><font  face="Candara">Become a supplier</a></font><br><br>
+              <a href="#"><font face="Candara">Hall of Fame</a></font><br><br>
+          </td>
+          <td valign="top"><br><br><br>
+              <a href="#"><font face="Candara">Legal and Policies</a></font><br><br>
+              <a href="#"><font face="Candara"><b>Angadi</b> Tech Blog</a></font><br><br>
+              <a href="#"><font face="Candara">Notices and Returns</a></font><br><br>
+          </td>
+          <td valign="top"><br><br>
+              <font face="Candara" size="6"><b>Reach out to us</b></font><br><br>
+              <i id="fff" class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;
+              <i id="iii" class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;
+              <i id="yyy" class="fa-brands fa-youtube"></i>&nbsp;&nbsp;&nbsp;
+              <i id="ttt" class="fa-brands fa-twitter"></i>&nbsp;&nbsp;&nbsp;
+          
+          </td>
+          <td valign="top"><br><br>
+              <font size="6" face="Candara"><b>Contact Us</b></font><br><br>
+              <font face="Candara">Angadi Private Limited,<br>
+              <b>CIN:</b>U76245I53H330TT01<br>
+              No.2 Anna garden,2nd street,<br>
+              velachery,chennai,india<br>
+              PINCODE : 600042<br>
+              E-mail address:<br>
+              query@angadiofficial.com<br>
+              @2022-2023angadi.com
+              </font>
+          </td>
+
+      </tr>
+  </table>
+  <br><br><br><br><br><br>
+</div>
+<script>
+    var bigimg=document.getElementById("big_img");
+    var smallimg=document.getElementsByClassName("small_img");
+    
+    smallimg[0].onclick = function(){
+        bigimg.src=smallimg[0].src;
+    }
+    smallimg[1].onclick = function(){
+        bigimg.src=smallimg[1].src;
+    }
+    smallimg[2].onclick=function(){
+        bigimg.src=smallimg[2].src;
+    }
+    smallimg[3].onclick=function(){
+        bigimg.src=smallimg[3].src;
+    }
+    smallimg[4].onclick=function(){
+        bigimg.src=smallimg[4].src;
+    }
+
+
+    $(document).ready(function(){
+  $(".nav-tabs a").click(function(){
+    $(this).tab('show');
+  });
+});
+</script>
+
+</body>
+</html>

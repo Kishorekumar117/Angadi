@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./login.js"></script>
+    <style>
+        #pin1{
+            position: absolute;
+            width: 150px;
+            height: 90px;
+            margin-right: 82%;
+            margin-top: 20px;
+        }
+        /* #pin2{
+            position: absolute;
+            width: 380px;
+            height: 500px;
+            margin-left: 45%;
+            margin-top: 20px;
+        } */
+        body{
+            background-color: rgb(33, 150, 144);
+            background-image: url(./bgdesign.png);
+            background-repeat: no-repeat;
+            /* background-position: cover; */
+            background-size: cover;
+            padding-top: 45px;
+            display: flex;
+            justify-content: center;
+            }
+        
+        #innerbg{
+            background-image: url(./loginbg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 85%;
+            height: 560px;
+            border-radius: 50px 0px 50px 0px;
+            box-shadow: 0px 0px 10px 10px rgb(14, 11, 11,0.5);
+        }
+        #content{
+            /* background-image: url(./bgdesign.png); */
+            background-position: cover;
+            background-size: cover;
+            background-color: rgb(33, 150, 144);
+            width: 35.8%;
+            height: 89%;
+            border-radius: 0px 0px 50px 0px;
+            /* box-shadow: 0px 0px 10px 10px rgb(151, 142, 142,0.5); */
+            margin-left: 657px;
+            margin-top: 2px;
+            position: absolute;
+            display: inline-block;
+        }
+        #contentbg{
+            background-color: rgb(255, 255, 255);
+            width: 35.8%;
+            height: 84.6%;
+            border-radius: 0px 0px 50px 0px;
+            /* box-shadow: 0px 0px 10px 10px rgb(151, 142, 142,0); */
+            margin-left: 657px;
+            margin-top: 2px;
+            display: inline-block;
+            position: absolute;
+        }
+        .inputb{
+            color: black;
+            font-size: 16px;
+            padding: 12px 10px 6px 40px;
+            border-bottom: 1px solid;
+            border-top: 0px;
+            border-left: 0px solid;
+            border-right: 0px;
+            background-color:  rgb(255, 174, 0,0);
+            border-radius: 10px 0px 0px 0px;
+        }
+        .inputb:hover{
+            color:black;
+            border-bottom: 4px solid;
+            border-top: 0px;
+            border-left: 1px solid;
+            border-right: 0px;
+            background-color:  rgba(151, 142, 142,0.1);
+            border-radius: 10px 0px 0px 0px;
+        }
+        ::placeholder{
+            color: white;
+         }
+        i{
+            position: absolute;
+            display: inline;
+            font-size: 22px;
+            margin-left:132px ;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        #in{
+            width: 100px;
+            height: 35px;
+            border-radius: 20px;
+            color: white;
+            background-color:  rgb(33, 150, 144);
+            border: 0px;
+            box-shadow: 1px  1px 4px 1px black;
+        }
+        #in:hover{
+            box-shadow: 0px 0px 4px 1px black;
+        }
+        #useri{
+            margin-top:217px;
+        }
+        #passi{
+            margin-top:271px;
+        }
+        #forgot>#fonte{
+            position: absolute;
+            color: rgb(255, 255, 255,0.7);
+            display: inline-block;
+            margin-left: 240px;
+            margin-top: 310px;
+        }
+        .your{
+            color: rgb(255, 255, 255,0.7);
+        }
+        #result{
+            color:rgb(252, 7, 7,0.7);
+        }
+    </style>
+</head>
+<body>
+    <img id="pin1" src="./s1pin.png">
+    <!-- <img id="pin2" src="innerbor.png"> -->
+    <div id="innerbg">
+        <!-- <div id="contentbg">
+        </div> -->
+            
+            <div id="content">
+                <div>
+                    <i class="fa-sharp fa-solid fa-user" id="useri"></i>
+                    <i class="fa-sharp fa-solid fa-lock" id="passi"></i>
+                    <div id="forgot"><a href="" id="fonte">Forgot Password?</a></div>
+                    </div>
+                <br><br><br><br>
+            <center><font size=6 color=#000080>ANGA
+            <font size=8 color=#ffA500>D</font>
+            <font size=6 color=#000080>I</font></font><br><br>
+            
+            <font size=5 face=Arial Black>Log <font size=5 color=#ff0000>i</font>n</font><br><br><br>
+    
+            <input class="inputb" id="us" type="text" placeholder="User Name"><br><br>
+            
+            <input class="inputb" id="pass" type="password" placeholder="Password"><br><br>
+            <p id="result"></p>
+            <br>
+            
+    
+            
+    
+            <table cellpadding="17"><tr><td><button id="in">Clear</button></td>
+                <td>
+                    <button id="in" onclick="login()">Login</button>
+                </td></tr></table>
+    
+            <divn><font class="your" size=3>ARE YOU NEW USER?  </font><a class="your" href="./angadi_signup_page.html">Sign up</a></div></center>
+            
+            </div>
+        
+    </div>
+</body>
+</html>

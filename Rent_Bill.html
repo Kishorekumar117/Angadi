@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent_Bill</title>
+    <script src="./my_new_project.js"></script>
+    <link rel="stylesheet" href="try.css">
+</head>
+<body><br>
+    <table id="main" border="0" width="100%">
+        <tr><td colspan="2"><div align="center"><h1>Rent Amount</h1></div></td></tr>
+        <tr>
+            <td width="35%">
+                <table id="left_box" border="0">
+                    <tr>
+                        <td><div class="texts" align="center"><input type="text" class="inputs" id="input1" required="required" maxlength="4" onkeyup="fn(this,'input2')">
+                            <span>Enter Latest Month 'EB' Reading</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><div  class="texts" align="center"><input type="text" class="inputs" required="required" id="input2" maxlength="4">
+                            <span>Enter Last Month 'EB' Reading</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <div align="center"><div class="s"><select class="myselect" id="mySelect">
+                            <option value="1">Rent Amount</option>
+                            <option value="3300">3,300</option>
+                            <option value="4000">4,000</option>
+                            <option value="6000">6,000</option>
+                          </select></div>
+                        <br>
+                          <div class="s"><select class="myselect" id="mySelect1">
+                            <option value="2">water Amount</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="500">500</option>
+                          </select></div></div><br>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><div align="center">
+                        <button class="butn" onclick="fun()">Check</button>
+                        <button class="butn" id="butn" onclick="fun2()">clear</button><br>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="65%">
+                <div align=center><table id="right1" border="0" width="80%" style="margin-top: 20px;"><tr>
+                    <td width="20%"><div align=center><p id="d"></p></div></td><td width="20%"><div align=center><p id="eb2"></p></div>
+                    </td><td width="20%"><div align=center><p id="unit"></p></div></td><td width="20%"><div align=center><p id="c_a"></p></div></td>
+                </tr></table></div>
+                <div align="center">
+                <table border="0" id="right2" width="40%" style="margin-top: 30px;">
+                    <tr>
+                    <td width="30%"><div align="right"><label>Rent Amount (வ) : </label></div></td>
+                    <td width="20%"><div align=center><p id="rent_amount"></p></div></td>
+                    </tr>
+
+                    <tr>
+                        <td width="20%"><div align="right"><label>Current Amount (க) : </label></div></td>
+                        <td width="20%"><div align=center> <p id="current_amount"></p></div></td>
+                        <td width="10%" rowspan="1"><div align=right><p id="p"></p></div></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"><div align="right"><label>Water Amount (த) : </label></div></td>
+                        <td width="20%"><div align=center> <p id="water_amount"></p></div></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"><div align="right"><label id="b">Basic Work (மு) : </label></div></td>
+                        <td width="20%"><div align=center> <p id="basic_work"></p></div></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="1"><div align="center"><hr width="90%"></div></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td width="20%"><div align=center><p id="total"></p></div></td>
+                    </tr>
+                </table></div>
+
+                
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./search.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="./demo.js"></script>
+  <style>
+    body{
+        margin: 0px;
+        background-image: linear-gradient(white,rgb(128, 128, 128,0.7));
+        background-repeat: no-repeat;
+        overflow-x: hidden;
+    }
+    #head{
+        position: fixed;
+        z-index: 1;
+        background-color: rgb(124, 160, 160);
+        box-shadow: 0px 0px 10px 2px gray;
+        width: 100%;
+        height: 63px;
+    }
+    #headh{
+        margin-left: 5px;
+        display: inline-block;
+    }
+    .bs:hover,.m:hover,.cs:hover,.e:hover,.td:hover{
+        border-bottom: 4.5px rgb(15, 15, 15,0.7) solid;
+        padding-bottom: 2px;
+        cursor: pointer;
+    }
+    #headl{
+        margin-left: 30px;
+        display: inline-block;
+        /* background-color: pink; */
+        color: rgb(252, 245, 245,0.8);
+        font-size: 17px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    sup{
+        color:red;
+        margin-left:3px ;
+    }
+    #inp{
+        margin-left: 80px;
+        color: black;
+        font-size: 15px;
+        padding: 12px 9px 3px 32px;
+        margin-bottom: 1px;
+        border-bottom: 1px solid;
+        border-top: 0px;
+        border-left: 0px solid;
+        border-right: 0px;
+        background-color:  rgb(255, 174, 0,0);
+        border-radius: 10px 0px 0px 0px;
+        
+    }
+    #inp:hover{
+        margin-left: 79px;
+        border-left: 1px solid;
+    }
+    ::placeholder{
+        font-size: 18px;
+    }
+    .pro,.bar{
+        margin-left: 25px;
+        display: inline-block;
+        font-size: 26px;
+        color: black;
+
+    }
+    #heads{
+        display: inline-block;
+        position: absolute;
+        margin-left: 73%;
+        margin-top: 30px;
+        font-size: 16px;
+        color:rgb(10, 10, 10,0.7);
+    }
+
+
+    /* Tooltip container */
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    }
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 2px rgb(112, 160, 157);
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    width: 190px;
+    top: 100%;
+    left: 50%;
+    margin-left: -150px;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+    }
+
+    .empty{
+        display: inline-block;
+        position: absolute;
+    }
+
+    /* ============= */
+    
+    .boad{
+      margin-top: 3px;
+      width: 100%;
+      height: 50px;
+      background-color: whitesmoke;
+      box-shadow: 0px 0px 7px 0px grey;
+    }
+    .brand{
+      margin-top: 15px;
+      font-size: 17px;
+    }
+    .brand2{
+      margin-top: 8px;
+      cursor: pointer;
+    }
+    .dbrand{
+      margin-left: 880px;
+      background-color: rgb(235, 235, 235,0.9);
+    }
+    .a{
+      color:rgb(66, 66, 66,0.7) ;
+    }
+    /* =========== */
+
+
+  .affix {
+    z-index: 1;
+    margin-top: 58px;
+    top: 0;
+    width: 100%;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .affix-top {
+    /* z-index: 1; */
+    position: static;
+    top: -75px;
+  }
+  .affix + .container-fluid {
+    z-index: 1;
+    padding-top: 70px;
+  }
+
+/* =========== end block code css========================= */
+.ad{
+
+    margin-top:20px;
+    margin-left: 9px;
+    background-color: whitesmoke;
+    height: 370px;
+    width: 99%;
+    /* border-radius: 15px; */
+    box-shadow: 0px 0px 8px 3px rgb(0, 0, 0,0.2);
+}
+.sho{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+#about{
+    margin-top: 5px;
+    background-color: white;
+}
+a{  
+  color:black;
+}
+#fff,#ttt{
+  color:blue;
+  font-size: 30px;
+}
+#iii{
+  color:pink;
+  font-size: 30px;
+}
+#yyy{
+  color:red;
+  font-size: 30px;
+}
+
+/* ================================================ */
+/* ========= */
+    
+    
+</style>
+  
+
+
+
+</head>
+<body>
+  
+  <div id="head">
+        
+    <!-- <div id="heads"><i class="fa-solid fa-magnifying-glass" id="search"></i></div> -->
+    <div id="headh" class="angadi"><font size=6 color=#000080>ANGA
+        <font size=8 color=#ffA500>D</font>
+        <font size=6 color=#000080>I</font></font>
+    </div>
+    <div id="headl" class="bs">Best Sellers<sup color="red" size="4.5">New</sup></div>
+    
+    <div id="headl" class="m">Mobile</div>
+    <div id="headl" class="cs">Customer Service</div>
+    <div id="headl" class="e">Electronics</div>
+    <div id="headl" class="td">Today's Deals<sup color="red" size="4.5">New</sup></div>
+
+    <div id="headl">
+      <input type="text" id="inp"  placeholder="Search for products" onkeyup="search(),search_brand()">
+    </div>
+
+    <div class="tooltip"><div id="hea" class="pro"><i class="fa-solid fa-circle-user"></i></div>
+    <span class="tooltiptext">name: kishore<br>mobile numeber:9841925511
+    </span>
+    </div>
+    <div id="hea" class="bar"><i class="fa-solid fa-bars"></i></div>
+</div><br>
+<!-- ================================================
+ -->
+ <div><br><br></div>
+<!-- ================================= -->
+<div>
+  <img src="./asus_ad.gif" alt="" width="1352px" height="280px">
+</div>
+
+<nav class="navbar" data-spy="affix" data-offset-top="270">
+ <div class="boad container-fluid">
+    <div class="col-sm-2 brand" ><b>Brand Typles</b></div>
+    <div class="brand col-sm-1">
+      <a class="a" href="#" id="brands1"></a>
+    </div>
+    <div class="col-sm-1 brand"><a class="a" href="#" id="brands2"></a></div>
+    <div class="col-sm-1 brand"><a class="a" href="#" id="brands3"></a></div>
+    <div class="col-sm-1 brand"><a class="a" href="#" id="brands4"></a></div>
+    <div class="col-sm-1 brand"><a class="a" href="#" id="brands5"></a></div>
+    <div class="col-sm-1 brand"><a class="a" href="#" id="brands6"></a></div>
+    
+    <div class="dropdown brand2">
+      <button id="drop_brand" class="btn dropdown-toggle" type="button" data-toggle="dropdown">See More
+      <span class=" caret"></span></button>
+      <ul class="dbrand dropdown-menu">
+        <li><a href="#" id="brands7"></a></li>
+        <li><a href="#" id="brands8"></a></li>
+        <li><a href="#" id="brands9"></a></li>
+        <li><a href="#" id="brands10"></a></li>
+        <li><a href="#" id="brands11"></a></li>
+        <li><a href="#" id="brands12"></a></li>
+        <li><a href="#" id="brands13"></a></li>
+        <li><a href="#" id="brands14"></a></li>
+      </ul>
+    </div>
+</div>
+</nav>
+<!-- <div><br><br><br></div> -->
+
+<div>
+  <img src="./lapad1.jpg" alt="" width="1348px" height="110px">
+</div>
+
+
+<!-- ================== =   == = = = = = = == = =  -->
+<table valign="" width="100%" border="0" cellspacing="" cellpadding=""><tr>
+  <td width="15%" valign="top" class="td_left">
+  <div class="left">
+    <font>
+      <b>Delivery Day</b><br><br>
+      <input type="checkbox" id="Delivery-day" name="Delivery-day" disabled><font disabled>&nbsp;Get it Today</font><br>
+      <input type="checkbox" id="Delivery-day" name="Delivery-day" disabled><font disabled>&nbsp;Get it by Tomorrow</font><br>
+      <input type="checkbox" id="Delivery-day" name="Delivery-day" disabled><font disabled>&nbsp;Get it in 2 Days</font><br><br>
+
+      <b>Category</b><br>
+      <h5 id="Category"></h5><br>
+
+      <b>Customer Review</b><br>
+      <i class="fa-solid fa-star" id="star1"></i>
+      <i class="fa-solid fa-star" id="star1"></i>
+      <i class="fa-solid fa-star" id="star1"></i>
+      <i class="fa-solid fa-star" id="star1"></i>
+      <i class="fa-regular fa-star" id="star1"></i><font id="star-c">&nbsp;& Up</font><br>
+
+      <i class="fa-solid fa-star" id="star1"></i>
+      <i class="fa-solid fa-star" id="star1"></i>
+      <i class="fa-solid fa-star" id="star1"></i>
+      <i class="fa-regular fa-star" id="star1"></i>
+      <i class="fa-regular fa-star" id="star1"></i><font id="star-c">&nbsp;& Up</font><br>
+
+      <i class="fa-solid fa-star" id="star1"></i>
+      <i class="fa-solid fa-star" id="star1"></i>
+      <i class="fa-regular fa-star" id="star1"></i>
+      <i class="fa-regular fa-star" id="star1"></i>
+      <i class="fa-regular fa-star" id="star1"></i><font id="star-c">&nbsp;& Up</font><br>
+
+      <i class="fa-solid fa-star" id="star1"></i>
+      <i class="fa-regular fa-star" id="star1"></i>
+      <i class="fa-regular fa-star" id="star1"></i>
+      <i class="fa-regular fa-star" id="star1"></i>
+      <i class="fa-regular fa-star" id="star1"></i><font id="star-c">&nbsp;& Up</font><br><br>
+
+      <b>Brands</b><br>
+      <input type="checkbox" id="checkbox1" name="brand" disabled>&nbsp;<font class="brands" id="brands1_"></font><br>
+      <input type="checkbox" id="checkbox2" name="brand" disabled>&nbsp;<font class="brands" id="brands2_"></font><br>
+      <input type="checkbox" id="checkbox3" name="brand" disabled>&nbsp;<font class="brands" id="brands3_"></font><br>
+      <input type="checkbox" id="checkbox4" name="brand" disabled>&nbsp;<font class="brands" id="brands4_"></font><br>
+      <input type="checkbox" id="checkbox5" name="brand" disabled>&nbsp;<font class="brands" id="brands5_"></font><br>
+      <input type="checkbox" id="checkbox6" name="brand" disabled>&nbsp;<font class="brands" id="brands6_"></font><br>
+      <input type="checkbox" id="checkbox7" name="brand" disabled>&nbsp;<font class="brands" id="brands7_"></font><br>
+      <input type="checkbox" id="checkbox8" name="brand" disabled>&nbsp;<font class="brands" id="brands8_"></font><br><br>
+      
+      <b><p id="Price-name">Price</p></b><br>
+      <p><b>Under</b>&nbsp;</p><font color="red">₹</font><p id="Price0"></p><br>
+      <font color="red">₹&nbsp;</font><p id="Price1"></p><br>
+      <font color="red">₹&nbsp;</font><p id="Price2"></p><br>
+      <font color="red">₹&nbsp;</font><p id="Price3"></p><br>
+      <p><b>Over</b>&nbsp;</p><font color="red">₹</font><p id="Price4"> </p><br>
+      
+      <b>Deals</b><br>
+      <input type="checkbox" id="Delivery-day" name="Delivery-day" disabled><font disabled>&nbsp;Today's deals</font><br>
+    </font>
+
+
+
+  </div>
+</td>
+
+<td valign="top" class="center-c" width="70%" height="700px" rowspan="2">
+  <section class="containers">
+    <div class="product-list" id="product-list">
+        
+      
+      
+      <div class="product">
+            <img src="./laptop3.png" onclick="window.location.href='buy_laptop.html'">
+            <div class="p-detials">
+                <h2 id="h2" onclick="window.location.href='buy_laptop.html'"><b>MSI Crosshair 15</b>, Intel 12th Gen. i7-12700H,
+                   40CM QHD 165Hz Gaming Laptop (16GB/1TB NVMe SSD/ Windows 11 Home/NVIDIA RTX 3070 8GB GDDR6/Black/2.47Kg),
+                   <b>12UGZ-1012IN</b></h2>
+                   <font onclick="window.location.href='buy_laptop.html'">
+
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-regular fa-star" id="star"></i>
+                    
+                    
+                    <br><font size="6"><font color="red">-25%</font><sup>₹</sup>1,34,990</font><br>
+                    <b>M.R.P.:</b><del>₹ 1,79,990</del><br>
+                    <b>Free Delivery</b><br>
+                    <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹2,862 Off</font> On Exchange<br><br>
+                  <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+                Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>6000</font></font>
+                
+                <div class="dropup" id="dropup">
+                  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+                  <ul class="dropdown-menu" id="dropdown-pop">
+                    <li class="li-h"><b>Additional Detial</b></li>
+                    <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+                    <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+                    <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+                    <li><hr width="85%" size="5%"/></li>
+                    <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+                    <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+                    <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+       <!-- ==================2====================  -->
+       <div class="product">
+        <img src="./lap1.png" onclick="window.location.href='buy_laptop.html'">
+        <div class="p-detials">
+            <h2 id="h2" onclick="window.location.href='buy_laptop.html'"><b>HP 15s, 11th Gen Intel Core i5</b>-1155G7, 15.6 inch(39.6cm) FHD Anti-Glare Laptop
+              (8GB RAM/512 GB SSD/Intel Iris Xe Graphics/Win 11/Dual Speakers/Backlit KeyboardAlexa Built-in/MSO 2021) <b>15s-fr4000TU</b></h2>
+               <font onclick="window.location.href='buy_laptop.html'">
+
+                <i class="fa-solid fa-star" id="star"></i>
+                <i class="fa-solid fa-star" id="star"></i>
+                <i class="fa-solid fa-star" id="star"></i>
+                <i class="fa-solid fa-star-half-stroke" id="star"></i>
+                <i class="fa-regular fa-star" id="star"></i>
+                
+                
+                <br><font size="6"><font color="red">-21%</font><sup>₹</sup>40,990</font><br>
+                <b>M.R.P.:</b><del>₹ 51,812</del><br>
+                <b>Free Delivery</b><br>
+                <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹1,958 Off</font> On Exchange<br><br>
+              <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+            Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>6000</font></font>
+            
+            <div class="dropup" id="dropup">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+              <ul class="dropdown-menu" id="dropdown-pop">
+                <li class="li-h"><b>Additional Detial</b></li>
+                <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+                <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+                <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+                <li><hr width="85%" size="5%"/></li>
+                <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+                <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+                <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+              </ul>
+            </div>
+
+          </div>
+    </div>
+   <!-- ======================================  -->
+   <div class="product">
+    <img src="./lap2.png" onclick="window.location.href='buy_laptop.html'">
+    <div class="p-detials">
+        <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>Apple 2020 MacBook</b> Air Laptop M1 chip, 13.3-inch/33.74 cm Retina Display,
+           8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPad; Silver</h2>
+           <font onclick="window.location.href='angadi_home_page.html'">
+
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-solid fa-star-half-stroke" id="star"></i>
+            
+            
+            <br><font size="6"><font color="red">-15%</font><sup>₹</sup>84,990</font><br>
+            <b>M.R.P.:</b><del>₹ 99,990</del><br>
+            <b>Free Delivery</b><br>
+            <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹4,061 Off</font> On Exchange<br><br>
+          <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+        Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>6000</font></font>
+        
+        <div class="dropup" id="dropup">
+          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+          <ul class="dropdown-menu" id="dropdown-pop">
+            <li class="li-h"><b>Additional Detial</b></li>
+            <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+            <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+            <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+            <li><hr width="85%" size="5%"/></li>
+            <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+            <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+            <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+          </ul>
+        </div>
+
+      </div>
+</div>
+<!-- ======================================  -->
+<div class="product">
+            <img src="./lap3.png" onclick="window.location.href='buy_laptop.html'">
+            <div class="p-detials">
+                <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>HP Ultra Beautiful</b> Laptop 348G4 Intel Core i5 Mobile-7th Gen -Processor,
+                   4 GB Ram & 512 GB SSD, 14Inches Screen Notebook Computer</h2>
+                   <font onclick="window.location.href='angadi_home_page.html'">
+
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star-half-stroke" id="star"></i>
+                    <i class="fa-regular fa-star" id="star"></i>
+                    <i class="fa-regular fa-star" id="star"></i>
+                    
+                    
+                    <br><font size="6"><font color="red">-74%</font><sup>₹</sup>22,990</font><br>
+                    <b>M.R.P.:</b><del>₹ 67,000</del><br>
+                    <b>Free Delivery</b><br>
+                    <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹1,862 Off</font> On Exchange<br><br>
+                  <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+                Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>6000</font></font>
+                
+                <div class="dropup" id="dropup">
+                  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+                  <ul class="dropdown-menu" id="dropdown-pop">
+                    <li class="li-h"><b>Additional Detial</b></li>
+                    <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+                    <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+                    <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+                    <li><hr width="85%" size="5%"/></li>
+                    <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+                    <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+                    <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+                  </ul>
+                </div>
+
+              </div>
+        </div>
+       <!-- ======================================  -->
+        <div class="product">
+            <img src="./lap4.png" onclick="window.location.href='buy_laptop.html'">
+            <div class="p-detials">
+                <h2 id="h2" onclick="window.location.href='buy_laptop.html'"><b>Lenovo IdeaPad Slim 5 Intel Core i5</b> 11th Gen 15.6" (39.62cm) FHD IPS Thin & Light Laptop
+                   (16GB/512GB SSD/Windows 11/Office 2021/Backlit/FPR/3months Game Pass/Graphite Grey/1.66Kg), <b>82FG01B5IN</b></h2>
+                   <font onclick="window.location.href='buy_laptop.html'">
+
+                   <br> <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-regular fa-star" id="star"></i>
+                    
+                    
+                    <br><font size="6"><font color="red">-39%</font><sup>₹</sup>59,990</font><br>
+                    <b>M.R.P.:</b><del>₹ 97,890</del><br>
+                    <b>Free Delivery</b><br>
+                    <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹2,866 Off</font> On Exchange<br><br>
+                  <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+                Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>6000</font></font>
+                
+                <div class="dropup" id="dropup">
+                  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+                  <ul class="dropdown-menu" id="dropdown-pop">
+                    <li class="li-h"><b>Additional Detial</b></li>
+                    <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+                    <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+                    <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+                    <li><hr width="85%" size="5%"/></li>
+                    <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+                    <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+                    <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+                  </ul>
+                </div>
+
+              </div>
+        </div>
+
+<!-- ========================================== -->
+
+<!-- ========================================== -->
+
+       <!-- ======================================  -->
+       <div class="product">
+        <img src="./pho1.png" onclick="window.location.href='angadi_home_page.html'">
+        <div class="p-detials">
+            <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>Apple i Phone 14 Pro</b>phone (1 TB) - Gold</h2><br>
+               <font onclick="window.location.href='angadi_home_page.html'">
+
+                <i class="fa-solid fa-star" id="star"></i>
+                <i class="fa-solid fa-star" id="star"></i>
+                <i class="fa-solid fa-star" id="star"></i>
+                <i class="fa-solid fa-star" id="star"></i>
+                <i class="fa-solid fa-star-half-stroke" id="star"></i>
+                
+                
+                <br><font size="6"><font color="red">-5%</font><sup>₹</sup>1,22,999</font><br>
+                <b>M.R.P.:</b><del>₹ 1,29,900</del><br>
+                <b>Free Delivery</b><br>
+                <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹5,862 Off</font> On Exchange<br><br>
+              <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+            Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>1000</font></font>
+            
+            <div class="dropup" id="dropup">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+              <ul class="dropdown-menu" id="dropdown-pop">
+                <li class="li-h"><b>Additional Detial</b></li>
+                <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+                <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+                <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+                <li><hr width="85%" size="5%"/></li>
+                <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+                <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+                <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+              </ul>
+            </div>
+
+          </div>
+    </div>
+   <!-- ======================================  -->
+    
+   <div class="product">
+    <img src="./pho2.png" onclick="window.location.href='angadi_home_page.html'">
+    <div class="p-detials">
+        <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>OnePlus 11R 5G</b> (Sonic Black, 8GB RAM, 128GB Storage)phone.</h2><br>
+           <font onclick="window.location.href='angadi_home_page.html'">
+
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-solid fa-star" id="star"></i>
+            <i class="fa-regular fa-star" id="star"></i>
+            
+            
+            <br><font size="6"><font color="red">-0%</font><sup>₹</sup>39,999</font><br>
+            <b>M.R.P.:</b><del>₹ 39,999</del><br>
+            <b>Free Delivery</b><br>
+            <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹1,862 Off</font> On Exchange<br><br>
+          <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+        Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>500</font></font>
+        
+        <div class="dropup" id="dropup">
+          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+          <ul class="dropdown-menu" id="dropdown-pop">
+            <li class="li-h"><b>Additional Detial</b></li>
+            <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+            <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+            <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+            <li><hr width="85%" size="5%"/></li>
+            <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+            <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+            <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+          </ul>
+        </div>
+
+      </div>
+</div>
+<!-- ======================================  -->
+
+<div class="product">
+  <img src="./pho3.png" onclick="window.location.href='angadi_home_page.html'">
+  <div class="p-detials">
+      <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>Samsung Galaxy S22 5G</b> (Green, 8GB, 128GB Storage)
+         with No Cost EMI/Additional Exchange Offers phone</h2><br>
+         <font onclick="window.location.href='angadi_home_page.html'">
+
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star-half-stroke" id="star"></i>
+          
+          
+          <br><font size="6"><font color="red">-38%</font><sup>₹</sup>52,999</font><br>
+          <b>M.R.P.:</b><del>₹ 85,999</del><br>
+          <b>Free Delivery</b><br>
+          <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹2,562 Off</font> On Exchange<br><br>
+        <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+      Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>1000</font></font>
+      
+      <div class="dropup" id="dropup">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+        <ul class="dropdown-menu" id="dropdown-pop">
+          <li class="li-h"><b>Additional Detial</b></li>
+          <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+          <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+          <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+          <li><hr width="85%" size="5%"/></li>
+          <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+          <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+          <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+        </ul>
+      </div>
+
+    </div>
+</div>
+<!-- ======================================  -->
+
+<div class="product">
+  <img src="./pho4.png" onclick="window.location.href='angadi_home_page.html'">
+  <div class="p-detials">
+      <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>Redmi Note 11T 5G </b>(Stardust White, 8GB RAM, 128GB ROM) phone | Dimensity 810 5G |
+         33W Pro Fast Charging | Charger Included | Additional Exchange Offers| Get 2 Months of YouTube Premium Free!</h2><br>
+         <font onclick="window.location.href='angadi_home_page.html'">
+
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-regular fa-star" id="star"></i>
+          <i class="fa-regular fa-star" id="star"></i>
+          
+          
+          <br><font size="6"><font color="red">-20%</font><sup>₹</sup>18,499</font><br>
+          <b>M.R.P.:</b><del>₹ 22,999</del><br>
+          <b>Free Delivery</b><br>
+          <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹800 Off</font> On Exchange<br><br>
+        <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+      Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>500</font></font>
+      
+      <div class="dropup" id="dropup">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+        <ul class="dropdown-menu" id="dropdown-pop">
+          <li class="li-h"><b>Additional Detial</b></li>
+          <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+          <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+          <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+          <li><hr width="85%" size="5%"/></li>
+          <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+          <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+          <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+        </ul>
+      </div>
+
+    </div>
+</div>
+<!-- ======================================  -->
+
+<div class="product">
+  <img src="./pho5.png" onclick="window.location.href='angadi_home_page.html'">
+  <div class="p-detials">
+      <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>Tecno Spark 8 Pro</b> phone (Interstellar Black, 4GB RAM,64GB Storage) | 
+        48MP Triple Camera | 33W Fast Charger</h2><br>
+         <font onclick="window.location.href='angadi_home_page.html'">
+
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-regular fa-star" id="star"></i>
+          
+          
+          <br><font size="6"><font color="red">-39%</font><sup>₹</sup>8,990</font><br>
+          <b>M.R.P.:</b><del>₹ 13,499</del><br>
+          <b>Free Delivery</b><br>
+          <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹300 Off</font> On Exchange<br><br>
+        <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+      Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>300</font></font>
+      
+      <div class="dropup" id="dropup">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+        <ul class="dropdown-menu" id="dropdown-pop">
+          <li class="li-h"><b>Additional Detial</b></li>
+          <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+          <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+          <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+          <li><hr width="85%" size="5%"/></li>
+          <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+          <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+          <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+        </ul>
+      </div>
+
+    </div>
+</div>
+<!-- ======================================  -->
+
+<!-- ==============   watch ============================ -->
+
+<!-- ======================================= -->
+        
+    
+<div class="product">
+  <img src="./wat1.png" onclick="window.location.href='angadi_home_page.html'">
+  <div class="p-detials">
+      <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>boAt Flash Edition Smart Watch</b> with Activity Tracker, Multiple Sports Modes, 1.3" Screen, 170+ Watch Faces, Sleep Monitor
+        , Gesture, Camera & Music Control, IP68 & 7 Days Battery Life<b>(Lightning Black)</b></h2><br>
+         <font onclick="window.location.href='angadi_home_page.html'">
+
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-regular fa-star" id="star"></i>
+          
+          
+          <br><font size="6"><font color="red">-83%</font><sup>₹</sup>1,199</font><br>
+          <b>M.R.P.:</b><del>₹ 6,000</del><br>
+          <b>Free Delivery</b><br>
+          <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹300 Off</font> On Exchange<br><br>
+        <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+      Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>600</font></font>
+      
+      <div class="dropup" id="dropup">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+        <ul class="dropdown-menu" id="dropdown-pop">
+          <li class="li-h"><b>Additional Detial</b></li>
+          <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+          <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+          <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+          <li><hr width="85%" size="5%"/></li>
+          <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+          <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+          <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+        </ul>
+      </div>
+
+    </div>
+</div>
+<!-- ======================================  -->
+
+<div class="product">
+  <img src="./wat2.png" onclick="window.location.href='angadi_home_page.html'">
+  <div class="p-detials">
+      <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>Fire-Boltt Gladiator 1.96"</b> Biggest Display Smart Watch with Bluetooth Calling,
+         Voice Assistant &123 Sports Modes, 8 Unique UI Interactions, SpO2, 24/7 Heart Rate Tracking, Rs 100 Off on UPI</h2><br>
+         <font onclick="window.location.href='angadi_home_page.html'">
+
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-regular fa-star" id="star"></i>
+          
+          
+          <br><font size="6"><font color="red">-20%</font><sup>₹</sup>1,999</font><br>
+          <b>M.R.P.:</b><del>₹ 3,499</del><br>
+          <b>Free Delivery</b><br>
+          <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹300 Off</font> On Exchange<br><br>
+        <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+      Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>300</font></font>
+      
+      <div class="dropup" id="dropup">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+        <ul class="dropdown-menu" id="dropdown-pop">
+          <li class="li-h"><b>Additional Detial</b></li>
+          <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+          <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+          <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+          <li><hr width="85%" size="5%"/></li>
+          <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+          <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+          <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+        </ul>
+      </div>
+
+    </div>
+</div>
+<!-- ======================================  -->
+
+<div class="product">
+  <img src="./wat3.png" onclick="window.location.href='angadi_home_page.html'">
+  <div class="p-detials">
+      <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>Apple Watch Series 8</b> [GPS + Cellular 45 mm] Smart Watch w/Silver Aluminium Case with White Sport Band. Fitness Tracker,
+         Blood Oxygen & ECG Apps, Always- On Retina Display, Water Resistant</h2><br>
+         <font onclick="window.location.href='angadi_home_page.html'">
+
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-regular fa-star" id="star"></i>
+          
+          
+          <br><font size="6"><font color="red">-5%</font><sup>₹</sup>55,900</font><br>
+          <b>M.R.P.:</b><del>₹ 59,999</del><br>
+          <b>Free Delivery</b><br>
+          <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹1900 Off</font> On Exchange<br><br>
+        <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+      Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>6000</font></font>
+      
+      <div class="dropup" id="dropup">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+        <ul class="dropdown-menu" id="dropdown-pop">
+          <li class="li-h"><b>Additional Detial</b></li>
+          <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+          <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+          <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+          <li><hr width="85%" size="5%"/></li>
+          <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+          <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+          <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+        </ul>
+      </div>
+
+    </div>
+</div>
+<!-- ======================================  -->
+
+<div class="product">
+  <img src="./wat4.png" onclick="window.location.href='angadi_home_page.html'">
+  <div class="p-detials">
+      <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>Tecno Spark 8 Pro</b> phone (Interstellar Black, 4GB RAM,64GB Storage) | 
+        48MP Triple Camera | 33W Fast Charger</h2><br>
+         <font onclick="window.location.href='angadi_home_page.html'">
+
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-regular fa-star" id="star"></i>
+          
+          
+          <br><font size="6"><font color="red">-39%</font><sup>₹</sup>8,990</font><br>
+          <b>M.R.P.:</b><del>₹ 13,499</del><br>
+          <b>Free Delivery</b><br>
+          <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹300 Off</font> On Exchange<br><br>
+        <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+      Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>300</font></font>
+      
+      <div class="dropup" id="dropup">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+        <ul class="dropdown-menu" id="dropdown-pop">
+          <li class="li-h"><b>Additional Detial</b></li>
+          <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+          <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+          <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+          <li><hr width="85%" size="5%"/></li>
+          <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+          <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+          <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+        </ul>
+      </div>
+
+    </div>
+</div>
+<!-- ======================================  -->
+
+<div class="product">
+  <img src="./wat5.png" onclick="window.location.href='angadi_home_page.html'">
+  <div class="p-detials">
+      <h2 id="h2" onclick="window.location.href='angadi_home_page.html'"><b>Tecno Spark 8 Pro</b> phone (Interstellar Black, 4GB RAM,64GB Storage) | 
+        48MP Triple Camera | 33W Fast Charger</h2><br>
+         <font onclick="window.location.href='angadi_home_page.html'">
+
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-solid fa-star" id="star"></i>
+          <i class="fa-regular fa-star" id="star"></i>
+          
+          
+          <br><font size="6"><font color="red">-39%</font><sup>₹</sup>8,990</font><br>
+          <b>M.R.P.:</b><del>₹ 13,499</del><br>
+          <b>Free Delivery</b><br>
+          <font color=blue>Bank Offer</font><br>Upto<font color=blue>₹300 Off</font> On Exchange<br><br>
+        <b>Inclusive of all taxes :</b><br><br>Buy now,pay in EMIs up to <b>12 months</b> with Angadi Pay Later<br>
+      Active & get welcome rewards of <font color="red"><font color="black"><sup>₹</sup></font>300</font></font>
+      
+      <div class="dropup" id="dropup">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">More Detials <i class="fa-solid fa-arrow-up"></i></button>
+        <ul class="dropdown-menu" id="dropdown-pop">
+          <li class="li-h"><b>Additional Detial</b></li>
+          <li><i class="fa-brands fa-slack"></i> Stylish & Portable Thin and Light Laptop</li>
+          <li><i class="fa-brands fa-slack"></i> 15.6 inch Full HD TN 250nits Anti-glare, 45% NTSC</li>
+          <li><i class="fa-brands fa-slack"></i> Light Laptop without Optical Disk Drive</li>
+          <li><hr width="85%" size="5%"/></li>
+          <li><i class="fa-brands fa-slack"></i> No cost EMI starting from ₹14,759/month</li>
+          <li><i class="fa-brands fa-slack"></i> Cash on Delivery</li>
+          <li><i class="fa-brands fa-slack"></i> Net banking & Credit/ Debit/ ATM card</li>
+        </ul>
+      </div>
+
+    </div>
+</div>
+<!-- ======================================  -->
+  
+       
+
+
+
+    </div>
+</section>
+</td>
+<!-- ======= -->
+
+<td valign="top" width="15%" class="t_right" rowspan="2">
+  <div class="td_right">
+      
+    <img src="./rightad6.gif">
+    <img src="./rightad2.gif">
+    <img src="./rightad3.gif">
+    <img src="./rightad0.gif">
+    <img src="./rightad8.gif">
+    <img src="./rightad9.gif"> 
+    
+  </div>
+  </td>
+</tr>
+</table>
+<!-- ================= -->
+
+<div class="co" align="center" style="margin-top: 150px;">
+  
+  <ul class="pagination justify-content-center" style="cursor: pointer; padding-left: 20px;">
+    <li class="page-item"><a class="page-link"><i class="fa-solid fa-arrow-left"></i></a></li>
+    <li class="page-item"><a class="page-link">1</a></li>
+    <li class="page-item"><a class="page-link">2</a></li>
+    <li class="page-item"><a class="page-link">3</a></li>
+    <li class="page-item"><a class="page-link">4</a></li>
+    <li class="page-item"><a class="page-link"><i class="fa-solid fa-arrow-right"></i></a></li>
+  </ul>
+  
+</div>
+
+
+<!-- ====================================================== -->
+<div align="center" class="ad">
+  <a href="#"><img class=sho src="./men.jpg" width="95%" height="350px"></a>
+</div>
+
+<div id="about">
+  <table border="0" width="100%">
+      <tr>
+          <td valign="top"><br><br>
+              <font face="Candara" size="6"><b>Shop Now On Angadi</b></font><br><br>
+              <font face="Candara">Trusted by more than 1 Crore Indians<br>
+              Cash on Delivery | Free Delivery</font><br>
+              <img src="./googleandapple.png" width="350px" height="90px">
+
+          </td>
+          <td valign="top"><br><br><br>
+              <a href="#"><font  face="Candara">Careers</a></font><br><br>
+              <a href="#"><font  face="Candara">Become a supplier</a></font><br><br>
+              <a href="#"><font face="Candara">Hall of Fame</a></font><br><br>
+          </td>
+          <td valign="top"><br><br><br>
+              <a href="#"><font face="Candara">Legal and Policies</a></font><br><br>
+              <a href="#"><font face="Candara"><b>Angadi</b> Tech Blog</a></font><br><br>
+              <a href="#"><font face="Candara">Notices and Returns</a></font><br><br>
+          </td>
+          <td valign="top"><br><br>
+              <font face="Candara" size="6"><b>Reach out to us</b></font><br><br>
+              <i id="fff" class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;
+              <i id="iii" class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;
+              <i id="yyy" class="fa-brands fa-youtube"></i>&nbsp;&nbsp;&nbsp;
+              <i id="ttt" class="fa-brands fa-twitter"></i>&nbsp;&nbsp;&nbsp;
+          
+          </td>
+          <td valign="top"><br><br>
+              <font size="6" face="Candara"><b>Contact Us</b></font><br><br>
+              <font face="Candara">Angadi Private Limited,<br>
+              <b>CIN:</b>U76245I53H330TT01<br>
+              No.2 Anna garden,2nd street,<br>
+              velachery,chennai,india<br>
+              PINCODE : 600042<br>
+              E-mail address:<br>
+              query@angadiofficial.com<br>
+              @2022-2023angadi.com
+              </font>
+          </td>
+
+      </tr>
+  </table>
+  <br><br><br><br><br><br>
+</div>
+
+
+</body>
+</html>

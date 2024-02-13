@@ -1,0 +1,311 @@
+body{
+    margin: 0px;
+    background-image: linear-gradient(white,grey);
+    background-repeat: no-repeat;
+}
+#head{
+    position: fixed;
+    background-color: rgb(112, 160, 157);
+    box-shadow: 0px 0px 10px 1px gray;
+    width: 100%;
+}
+#headh{
+    margin-left: 5px;
+    display: inline-block;
+}
+.bs:hover,.m:hover,.cs:hover,.e:hover,.td:hover{
+    border-bottom: 4.5px rgb(15, 15, 15,0.7) solid;
+    padding-bottom: 2px;
+}
+#headl{
+    margin-left: 30px;
+    display: inline-block;
+    /* background-color: pink; */
+    color: rgb(252, 245, 245,0.8);
+    font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+sup{
+    color:red;
+    margin-left:3px ;
+}
+#inp{
+    margin-left: 80px;
+    color: black;
+    font-size: 15px;
+    padding: 12px 9px 3px 32px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid;
+    border-top: 0px;
+    border-left: 0px solid;
+    border-right: 0px;
+    background-color:  rgb(255, 174, 0,0);
+    border-radius: 10px 0px 0px 0px;
+    
+}
+#inp:hover{
+    margin-left: 79px;
+    border-left: 1px solid;
+}
+::placeholder{
+    font-size: 18px;
+}
+.pro,.bar{
+    margin-left: 25px;
+    display: inline-block;
+    font-size: 26px;
+    color: black;
+
+}
+#heads{
+    display: inline-block;
+    position: absolute;
+    margin-left: 74.6%;
+    margin-top: 30px;
+    font-size: 16px;
+    color:rgb(10, 10, 10,0.7);
+}
+
+
+/* Tooltip container */
+.tooltip {
+position: relative;
+display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: white;
+box-shadow: 0px 0px 3px 2px rgb(112, 160, 157);
+color: black;
+text-align: center;
+padding: 5px 0;
+border-radius: 6px;
+
+/* Position the tooltip text - see examples below! */
+position: absolute;
+z-index: 1;
+width: 190px;
+top: 100%;
+left: 50%;
+margin-left: -150px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+
+.empty{
+    display: inline-block;
+    position: absolute;
+}
+
+/* ......................... */
+
+div.gallery {
+margin: 5px;
+border: 1px solid #ccc;
+float: left;
+width: 140px;
+height: auto;
+}
+
+div.gallery:hover {
+border: 1.5px solid  rgb(10, 12, 12);
+}
+img:hover{
+    width:"400px";
+    height:"200px";
+}
+
+div.gallery img {
+width: 100%;
+height: auto;
+}
+
+div.desc {
+color:black;
+padding: 15px;
+text-align: center;
+background-color: white;
+}
+/* //// */
+.gallery {
+/* position: relative; */
+display: inline-block;
+}
+.gallery .desc1,.desc2{
+visibility: hidden;
+width: 120px;
+background-color: white;
+box-shadow: 0px 0px 3px 2px black;
+color: black;
+text-align: center;
+padding: 5px 0;
+border-radius: 6px;
+
+/* Position the tooltip text - see examples below! */
+position: absolute;
+z-index: 1;
+width: 270px;
+/* top: 280px; */
+}
+.gallery .desc1 {
+    left:75%;top: 355px;
+}
+.gallery #desc1 {
+    left:10%;top: 355px;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.gallery:hover .desc1{
+visibility: visible;
+}
+
+.gallery .desc2 {
+    left:75%;top: 605px;
+}
+.gallery #desc2 {
+    left:10%;top: 605px;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.gallery:hover .desc2 {
+visibility: visible;
+}
+
+.fdesc{
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* ====================================== */
+a{
+    text-decoration: none;
+}
+sup{
+    color: black;
+}
+#star{
+    color: gold;
+    font-size: 18px;
+}
+#cont_c{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-height: 120px;
+    background-color: rgb(248, 243, 243);
+    /* border: 1px solid rgb(128, 128, 128,0.7); */
+    box-shadow: 0px 0px 15px 2px rgb(190, 190, 190);
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+#cont_c:hover{
+    overflow-x: auto;
+}
+#cont_c #s_cont-c{
+    min-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    line-height: 110px;
+    text-align: center;
+    background-color: lightblue;
+    /* margin-right: 15px; */
+    margin: 5px 15px 20px 3px;
+}
+#cont_c #s_cont-c:hover{
+    background-color: hsl(195, 53%, 79%,0.4);
+}
+#icici1{
+    height: 90px;
+    width: 95%;
+    background-color: whitesmoke;
+    margin-left: 33px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px rgb(190, 190, 190);
+}
+#icici1 div{
+    padding-top: 15px;
+}
+/* ============================ */
+
+
+.gallery {
+/* position: relative; */
+display: inline-block;
+}
+.gallery .desc3,.desc4{
+visibility: hidden;
+width: 120px;
+background-color: white;
+box-shadow: 0px 0px 3px 2px black;
+color: black;
+text-align: center;
+padding: 5px 0;
+border-radius: 6px;
+
+/* Position the tooltip text - see examples below! */
+position: absolute;
+z-index: 1;
+width: 270px;
+/* top: 280px; */
+}
+.gallery .desc3 {
+    left:75%;top: 985px;
+}
+.gallery #desc3 {
+    left:10%;top: 985px;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.gallery:hover .desc3{
+visibility: visible;
+}
+
+.gallery .desc4 {
+    left:75%;top: 1230px;
+}
+.gallery #desc4 {
+    left:10%;top: 1230px;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.gallery:hover .desc4 {
+visibility: visible;
+}
+/* ==================================== */
+.ad{
+    margin-left: 5px;
+    background-color: whitesmoke;
+    height: 370px;
+    width: 99%;
+    /* border-radius: 15px; */
+    box-shadow: 0px 0px 8px 3px rgb(0, 0, 0,0.2);
+}
+.sho{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+#about{
+    margin-top: 5px;
+    background-color: white;
+}
+a{  
+  color:black;
+}
+#fff,#ttt{
+  color:blue;
+  font-size: 30px;
+}
+#iii{
+  color:pink;
+  font-size: 30px;
+}
+#yyy{
+  color:red;
+  font-size: 30px;
+}

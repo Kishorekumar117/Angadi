@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my_new_project</title>
+    <style>
+        #in_take{
+            background-color: gray;
+            width: auto;
+            height: 300px;
+        }
+        #cont{
+            padding: 20px;
+            margin: 50px;
+            display: inline-block;
+            border: 2px solid black;
+            width: auto;
+            height: auto;
+        }
+        .inputs{
+            font-size: 18px;
+            padding-left: 35px;
+            width: 350px;
+            height: 40px;
+            border-radius: 20px;
+            box-shadow: 4px 4px 10px 0px black;
+        }
+        .butn{
+            width: 100px;
+            height: 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: palevioletred ;
+        }
+        .butn:hover{
+            box-shadow: 4px 4px 10px 0px black;
+        }
+        p{
+            display: inline-block;
+        }
+        
+    </style>
+    <script src="./my_new_project.js"></script>
+    <link rel="stylesheet" href="./my_new_project.css">
+</head>
+<body>
+    <div id="in_take" align="center">
+        <div id="cont">
+        
+                <input type="text" class="inputs" id="input1" placeholder="Enter The Latest Month 'EB' Reading" maxlength="4" onkeyup="fn(this,'input2')"><br><br>
+                <input type="text" class="inputs" id="input2" placeholder="Enter The Last Month 'EB' Reading"maxlength="4"><br><br>
+                <select id="mySelect">
+                    <option value="1">Rent Amount</option>
+                    <option value="3300">3,300</option>
+                    <option value="4000">4,000</option>
+                    <option value="6000">6,000</option>
+                  </select>
+                
+                  <select id="mySelect1">
+                    <option value="2">water Amount</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                    <option value="500">500</option>
+                  </select><br><br>
+                
+                <button class="butn" onclick="fun()">Check</button>
+                <button class="butn" onclick="fun2()">clear</button>
+            <p id="try"></p>
+        </div>
+    </div><br>
+<!-- =============================== -->
+
+
+    <div id="in_take" align="center">
+        <div id="cont2">
+
+            <label>Rent Amount (வ) : </label> <p id="rent_amount"></p><br>
+
+            <label>Current Amount (க) : </label> <p id="current_amount"></p><br>
+
+            <label>Water Amount (த) : </label> <p id="water_amount"></p><br>
+
+            <label id="b">Basic Work (மு) : </label> <p id="basic_work"></p><br>
+
+            <hr width="80%">
+
+            <p id="total"></p>
+
+            <p id="d"></p>
+
+        </div>
+    </div>
+
+</body>
+</html>

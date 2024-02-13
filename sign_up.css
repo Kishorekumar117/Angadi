@@ -1,0 +1,144 @@
+#pin1{
+    position: absolute;
+    width: 150px;
+    height: 90px;
+    margin-left: 75%;
+    margin-top: 10px;
+}
+/* #pin2{
+    position: absolute;
+    width: 380px;
+    height: 500px;
+    margin-left: 45%;
+    margin-top: 20px;
+} */
+body{
+    background-color: rgb(33, 150, 144);
+    background-image: url(./bgdesign.png);
+    background-repeat: no-repeat;
+    /* background-position: cover; */
+    background-size: cover;
+    padding-top: 45px;
+    display: flex;
+    justify-content: center;
+    }
+
+#innerbg{
+    background-image: url(./signupbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 85%;
+    height: 560px;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: 0px 0px 10px 10px rgb(14, 11, 11,0.5);
+}
+#content{
+    /* background-image: url(./bgdesign.png); */
+    background-position: cover;
+    background-size: cover;
+    background-color: rgb(33, 150, 144);
+    width: 37%;
+    height: 89%;
+    border-radius: 50px 0px 0px 0px;
+    /* box-shadow: 0px 0px 10px 10px rgb(151, 142, 142,0.5); */
+    margin-left: 2px;
+    margin-top: 2px;
+    position: absolute;
+    display: inline-block;
+}
+#contentbg{
+    background-color: rgb(255, 255, 255);
+    width: 37%;
+    height: 84.5%;
+    border-radius: 50px 0px 0px 0px;
+    margin-left: 2px;
+    margin-top: 2px;
+    display: inline-block;
+    position: absolute;
+}
+.inputb{
+    color: black;
+    font-size: 16px;
+    padding: 12px 10px 6px 45px;
+    border-bottom: 1px solid;
+    border-top: 0px rgb(0, 0, 0,0.1) solid;
+    border-left: 0px rgb(0, 0, 0,0.7) solid;
+    border-right: 0px rgb(0, 0, 0,0.1) solid;
+    background-color:  rgb(255, 174, 0,0);
+    border-radius: 10px 0px 0px 0px;
+    box-shadow: 0px 0px 5px 0px black;
+}
+.inputb:hover{
+    color:black;
+    border-bottom: 4px solid;
+    border-top: 0px;
+    border-left: 1px solid;
+    border-right: 0px;
+    background-color:  rgba(151, 142, 142,0.1);
+    border-radius: 10px 0px 0px 0px;
+}
+::placeholder{
+    color: white;
+ }
+#icon>i{
+    position: absolute;
+    display: inline;
+    font-size: 22px;
+    margin-left:135px ;
+}
+#icon1{
+    margin-top: 118px;
+}
+#icon2{
+    margin-top: 162px;
+}
+#icon3{
+    margin-top: 206px;
+}
+#icon4{
+    margin-top: 250px;
+}
+#icon5{
+    margin-top: 294px;
+}
+#icon6{
+    margin-top: 338px;
+}
+#in{
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    color: white;
+    background-color:  rgb(33, 150, 144);
+    border: 0px;
+    box-shadow: 1px  1px 4px 1px black;
+}
+#in:hover{
+    box-shadow: 0px 0px 4px 1px black;
+}
+#icon2{
+    display: inline;
+}
+#f,#g,#t{
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+}
+
+#f:hover{
+    font-size: 27px;
+    color: white;
+}
+#g:hover{
+    font-size: 27px;
+    color: white;
+}
+
+#t:hover{
+    font-size: 27px;
+    color: white;
+}
+
+.your{
+    color: rgb(255, 255, 255,0.5);
+}

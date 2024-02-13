@@ -1,0 +1,74 @@
+#in_take{
+    background-color: gray;
+    width: auto;
+    height: 300px;
+}
+#cont{
+    padding: 20px;
+    margin: 50px;
+    display: inline-block;
+    border: 2px solid black;
+    width: auto;
+    height: auto;
+}
+.inputs{
+    font-size: 18px;
+    padding-left: 35px;
+    width: 350px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 0px black;
+}
+.butn{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: palevioletred ;
+}
+.butn:hover{
+    box-shadow: 4px 4px 10px 0px black;
+}
+p{
+    display: inline-block;
+}
+#cont2{
+    width: 400px;
+    border: 2px solid black;
+}
+
+/* =============================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
